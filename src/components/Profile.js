@@ -55,6 +55,7 @@ const Profile = ({setValue, refreshPage, setRefreshPage}) => {
                 // color="warning"
                 style={{marginTop: "2%"}}
             >
+                
                 {userDetails.following.length}
             </Button>
             </h1></div>
