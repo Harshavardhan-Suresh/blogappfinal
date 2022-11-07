@@ -17,7 +17,6 @@ const Following = ({setValue}) => {
       setData(res.data.user.following); 
       console.log(data);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>
@@ -27,6 +26,8 @@ const Following = ({setValue}) => {
         <Button 
           onClick={() => navigate(`/user/${item._id}/`)}
           // variant="contained"
+          
+          key={item._id}
           sx={{ margin: 1, borderRadius: 2, height: "2em", fontSize:40, }}
           // color="red"
           
