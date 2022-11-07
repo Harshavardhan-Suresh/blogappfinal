@@ -16,6 +16,7 @@ const Followers = ({setValue}) => {
       setData(res.data.user.followers); 
       console.log(data);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>
@@ -23,7 +24,6 @@ const Followers = ({setValue}) => {
         <div style={{display:"flex", flexDirection:"column" }}>{ data && data.map((item)=>(
         //  <p key={item} style={{fontSize:50, textAlign: "center", color:"lightgreen"}}> { item.name } </p>
         <Button 
-          key={item._id}
           onClick={() => navigate(`/user/${item._id}/`)}
           // variant="contained"  
           sx={{ margin: 1, borderRadius: 2, height: "2em", fontSize:40, }}
